@@ -1,0 +1,11 @@
+.nextflow*
+venv/
+nextflow
+.idea/
+--cli_attribute
+--cli_file
+--out_dir
+--rna_file
+COSMO/
+output/
+work/
