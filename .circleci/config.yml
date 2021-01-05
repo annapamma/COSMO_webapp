@@ -6,4 +6,13 @@ jobs:
       - image: proteomics/cosmo:latest
     steps:
       - checkout
-      - run: Rscript scripts/slimmed/preprocess.R $(pwd) scripts/COSMO/example_data/for_2b/Testing_1/test_pro.tsv scripts/COSMO/example_data/for_2b/Testing_1/test_rna.tsv scripts/COSMO/example_data/for_2b/Testing_1/test_cli.tsv
+#      - run: |
+#          Rscript scripts/slimmed/preprocess.R $(pwd) \
+#          scripts/COSMO/example_data/for_2b/Testing_1/test_pro.tsv \
+#          scripts/COSMO/example_data/for_2b/Testing_1/test_rna.tsv \
+#          scripts/COSMO/example_data/for_2b/Testing_1/test_cli.tsv
+      - run: |
+          Rscript scripts/slimmed/run_method_1.R $(pwd) \
+          scripts/COSMO/example_data/for_2b/Testing_1/test_pro.tsv \
+          scripts/COSMO/example_data/for_2b/Testing_1/test_rna.tsv \
+          scripts/COSMO/example_data/for_2b/Testing_1/test_cli.tsv
